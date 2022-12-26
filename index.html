@@ -11,22 +11,33 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="/script.js" type="module" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="backdrop"></div>
     <div class="container">
       <nav class="navbar">
         <div class="navbar-center">
+          <div class="options">
           <span class="menu-icon">
             <i class="fa-solid fa-bars"></i>
           </span>
-          <h1 class="head-text">Sepi's Shoe Locker</h1>
+          <aside class="search-bar">
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <form  class="search-form" id="search">
+              <input type="text" class="search-input" placeholder="search for....">
+            </form>
+          </aside>
+          </div>
+          <h1 class="head-text">Sepi's Shoe Locker</h1>  
           <span class="cart-icon">
             <i class="fa-solid fa-cart-plus"></i>
             <span class="cart-items">0</span>
           </span>
         </div>
       </nav>
+      <!-- search bar -->
+      <!-- end of search bar -->
       <!-- end of nav -->
       <aside class="modal">
         <h3 class="modal-title">Your Cart</h3>
@@ -62,17 +73,16 @@
       <!-- end of cart modal -->
       <section class="product-section">
         <div class="section-title">
-          <a class="shoe-type" href="#">Dunks</a>
-          <a class="shoe-type" href="#">Blazers</a>
-          <a class="shoe-type" href="#">Jordans</a>
-          <a class="shoe-type" href="#">slips</a>
+          <a class="shoe-type" data-filter="Dunk" href="#">Dunks</a>
+          <a class="shoe-type" data-filter="blazer" href="#">Blazers</a>
+          <a class="shoe-type" data-filter="Jordan" href="#">Jordans</a>
+          <a class="shoe-type" data-filter="slip" href="#">slips</a>
         </div>
         <div class="products">
          
         </div>
       </section>
       <!-- end of product section -->
-      
       <section class="footer-section">
         <footer class="footer">
           <span class="icon home-icon"><i class="fa-solid fa-house-user"></i></i></span>

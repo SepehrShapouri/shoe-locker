@@ -34,5 +34,89 @@ export const productData = [
         title : "Dunk Low Pale",
         price : 159,
         imageUrl :"./images/dunk-6.webp"
+    },
+    {
+        id : 7,
+        title : "Jordan 1 Optima",
+        price : 179,
+        imageUrl :"./images/jordan-1.webp"
     }
+    ,
+    {
+        id : 8,
+        title : "Jordan 1 Lighter",
+        price : 179,
+        imageUrl :"./images/jordan-2.webp"
+    }
+    ,
+    {
+        id : 9,
+        title : "Jordan 1 Bright",
+        price : 179,
+        imageUrl :"./images/jordan-3.webp"
+    }
+    ,
+    {
+        id : 10,
+        title : "Jordan 1 Bima",
+        price : 179,
+        imageUrl :"./images/jordan-4.webp"
+    }
+    ,
+    {
+        id : 11,
+        title : "Jordan 1 Optima",
+        price : 179,
+        imageUrl :"./images/jordan-5.webp"
+    }
+    ,
+    {
+        id : 12,
+        title : "Blazer Kyli",
+        price : 179,
+        imageUrl :"./images/blazer-1.webp"
+    }
+    ,
+    {
+        id : 13,
+        title : "Blazer Kendall",
+        price : 179,
+        imageUrl :"./images/blazers-2.webp"
+    }
+    ,
+    {
+        id : 14,
+        title : "Blazer Shreck",
+        price : 179,
+        imageUrl :"./images/blazer-3.webp"
+    }
+    ,
+    {
+        id : 15,
+        title : "Blazer Leanin",
+        price : 179,
+        imageUrl :"./images/blazer-4.webp"
+    }
+    ,
+    {
+        id : 16,
+        title : "Blazer Speed",
+        price : 179,
+        imageUrl :"./images/blazer-5.jpeg"
+    }
+    ,
+    {
+        id : 17,
+        title : "Blazer Tomas",
+        price : 179,
+        imageUrl :"./images/blazer-6.jpeg"
+    }
+    ,
+    {
+        id : 18,
+        title : "Blazer Boah",
+        price : 179,
+        imageUrl :"./images/blazer-7.webp"
+    }
+
 ]

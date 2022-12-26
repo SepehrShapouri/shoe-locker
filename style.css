@@ -68,6 +68,9 @@ body {
 .head-text {
   color: var(--primaryColor);
 }
+.head-text-nA{
+  display: none;
+}
 .cart-icon i,
 .menu-icon i {
   font-size: 1.5rem;
@@ -126,6 +129,7 @@ body {
   border-radius: 10px;
   height: 70%;
   object-fit: cover;
+  border: 2px solid white;
 }
 .product-info {
   width: 100%;
@@ -196,6 +200,7 @@ button:hover {
   font-size: 20px;
   color: var(--primaryColor);
   width: 100%;
+
 }
 .icon:hover {
   border-bottom: 2px solid orange;
@@ -360,4 +365,54 @@ overflow: hidden;
   .modal-info{
     width: 150px;
   }
+}
+
+
+.search-bar{
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.search-form{
+display: flex;
+}
+.search-input{
+  width: 350px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: var(--primaryColor);
+  padding: 1rem;
+display: none;
+overflow:hidden;
+visibility: hidden;
+
+}
+.search-input-active{
+  transition: all linear 0.2s;
+  display: block;
+overflow:auto;
+visibility: visible;
+}
+.search-icon{
+  color: var(--primaryColor);
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media all and (max-width: 600px) {
+  .search-input{
+    width: 240px;
+  }
+}
+#search input:focus{
+  border: solid 1px var(--primaryColor);
 }

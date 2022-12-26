@@ -7,12 +7,18 @@ const cartTotal = document.querySelector(".cart-price");
 const cartQuantity = document.querySelector(".cart-items");
 const cartContent = document.querySelector(".cart-content");
 const clearCart = document.querySelector(".clear");
+const searchBar = document.querySelector(".search-bar .search-icon");
+const searchInput = document.querySelector(".search-input");
+const headText = document.querySelector(".head-text");
+const filterType = document.querySelectorAll(".shoe-type")
 // global cart variable
 let cart = [];
 // global add to cart variables
 let buttonsDom = [];
+let allProductsData = [];
+let filters = { searchItems: "" };
 // import products
-import { productData } from "./products.js";
+// import { productData } from "./products.js";
 
 //  events
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // call requierd methods
   ui.cartLogic();
   ui.setupApp();
-  ui.displayProduct(productData);
   ui.getCartBtn();
   Storage.saveProducts(productData);
 });
@@ -32,6 +37,12 @@ cartBtn.addEventListener("click", (e) => {
   backDrop.classList.toggle("bd-active");
 });
 
+searchBar.addEventListener("click", searchActive);
+
+searchInput.addEventListener("input", (e) => {
+  filters.searchItems = e.target.value;
+  renderProducts(allProductsData, filters);
+});
 // confrim cart
 confirmBtn.addEventListener("click", closeModal);
 // close cart
@@ -40,8 +51,18 @@ backDrop.addEventListener("click", closeModal);
 // classes
 class Products {
   //  get products from import
-  getProduct() {
-    return productData;
+  async getProduct() {
+    const ui = new UI();
+    await axios
+      .get("http://localhost:3000/items")
+      .then((res) => {
+        allProductsData = res.data;
+        renderProducts(allProductsData, filters);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    Storage.saveProducts(allProductsData);
   }
 }
 
@@ -146,13 +167,15 @@ class UI {
         const subQuantity = event.target;
         const id = subQuantity.dataset.id;
         const substractedItem = cart.find((c) => c.id == id);
-    
+
         if (substractedItem.quantity === 1) {
           this.removeItem(id);
-          cartContent.removeChild(subQuantity.parentElement.parentElement.parentElement);
+          cartContent.removeChild(
+            subQuantity.parentElement.parentElement.parentElement
+          );
           return;
         }
-    
+
         substractedItem.quantity--;
         // update storage
         Storage.saveCart(cart);
@@ -181,9 +204,8 @@ class UI {
     Storage.saveCart(cart);
     const button = this.getSingleButtons(id);
     button.disabled = false;
-    button.classList.remove("inCart")
+    button.classList.remove("inCart");
     button.innerHTML = `<i class="fa-solid fa-plus"></i>add to cart`;
-
   }
   getSingleButtons(id) {
     return buttonsDom.find((btn) => parseInt(btn.dataset.id) === parseInt(id));
@@ -218,3 +240,30 @@ function inCartBtn(btn) {
   btn.disabled = true;
   btn.classList.toggle("inCart");
 }
+
+function searchActive() {
+  searchInput.classList.toggle("search-input-active");
+  headText.classList.toggle("head-text-nA");
+}
+
+function renderProducts(_product, _filters) {
+  const filteredProducts = _product.filter((p) => {
+    return p.title.toLowerCase().includes(_filters.searchItems.toLowerCase());
+  });
+  console.log(filteredProducts)
+  productCenter.innerHTML = "";
+  const ui = new UI();
+  ui.displayProduct(filteredProducts);
+  ui.getCartBtn()
+}
+
+
+filterType.forEach((btn)=>{
+  btn.addEventListener("click",(e)=>{
+    const filter = e.target.dataset.filter
+
+    console.log(filter)
+    filters.searchItems = filter
+    renderProducts(allProductsData,filters)
+  })
+})
