@@ -54,7 +54,7 @@ class Products {
   async getProduct() {
     const ui = new UI();
     await axios
-      .get("https://localhost/3000")
+      .get("https://github.com/SepehrShapouri/json-database/blob/main/db.json")
       .then((res) => {
         allProductsData = res.data;
         renderProducts(allProductsData, filters);
