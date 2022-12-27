@@ -54,7 +54,7 @@ class Products {
   async getProduct() {
     const ui = new UI();
     await axios
-      .get("http://localhost:3000/items")
+      .get("https://api.jsonbin.io/v3/b/63aa7ba901a72b59f23a0a8e")
       .then((res) => {
         allProductsData = res.data;
         renderProducts(allProductsData, filters);
