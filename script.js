@@ -55,7 +55,7 @@ class Products {
   async getProduct() {
     const ui = new UI();
     await axios
-      .get("http://localhost:3000/items")
+      .get("https://my-json-server.typicode.com/SepehrShapouri/json-database/items")
       .then((res) => {
         allProductsData = res.data;
         renderProducts(allProductsData, filters);
