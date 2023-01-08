@@ -313,14 +313,16 @@ button:hover {
   border-color: var(--secondaryColor);
 }
 .modal {
-  display: none;
+  /* display: none;
   opacity: 0;
-  overflow: hidden;
+  overflow: hidden; */
+  transform: translateY(-1000px);
 }
 .modal-active {
   display: flex;
   opacity: 1;
   overflow: auto;
+  transform: translateY(100px);
 }
 .backdrop {
   background-color: rgba(0, 0, 0, 0.5);
