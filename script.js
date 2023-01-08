@@ -1,3 +1,4 @@
+
 const cartModal = document.querySelector(".modal");
 const cartBtn = document.querySelector(".cart-icon");
 const backDrop = document.querySelector(".backdrop");
