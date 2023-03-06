@@ -217,7 +217,7 @@ class AppUI {
     console.log(value)
   }
   checkOutPage(e){
-    location.replace("http://127.0.0.1:5500/public/checkout.html")
+    location.replace("/public/checkout.html")
   }
 }
 export default new AppUI();
