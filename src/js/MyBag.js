@@ -11,7 +11,7 @@ const mainSection = document.querySelector(".main-section")
 class MyBag {
   constructor() {
     this.bag = [];
-    homeButton.addEventListener("click",()=>location.replace("http://127.0.0.1:5500/public/index.html"))
+    homeButton.addEventListener("click",()=>location.replace("/public/index.html"))
   }
   getBag(){
     return Storage.getCartItem()
