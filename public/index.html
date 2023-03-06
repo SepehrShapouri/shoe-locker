@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepi's Shoe Locker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <script src="../src/js/App.js" type="module" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-center">
+          <div class="options">
+          <span class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+          <aside class="search-bar">
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <form  class="search-form" id="search">
+              <input type="text" class="search-input" placeholder="search for....">
+            </form>
+          </aside>
+          </div>
+          <h1 class="head-text">Sepi's Shoe Locker</h1>  
+          <span class="cart-icon">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span class="cart-items">0</span>
+          </span>
+        </div>
+      </nav>
+      <!-- search bar -->
+      <!-- end of search bar -->
+      <!-- end of nav -->
+      <aside class="modal">
+        <h3 class="modal-title">Your Cart</h3>
+        <div class="cart-content">
+<!-- <div class="modal-product">
+  <img class="pro-image" src="/images/dunk-1.webp" alt="">
+<div class="modal-info">
+  <h4 class="pro-title">Dunk Low Sugar</h4>
+  <p class="product-price">&dollar;179.99</p>
+</div>
+<div class="modal-actions">
+<div class="actions">
+  <span class="chev-up">
+    <i class="fa-solid fa-chevron-up"></i>
+  </span>
+  <p class="quantity">1</p>
+<span class="chev-down">
+  <i class="fa-solid fa-chevron-down"></i>
+</span>
+</div>
+<span class="trash"><i class="fa-solid fa-trash"></i></span>
+</div>
+</div> -->
+</div>
+<div class="modal-buttons">
+  <p class="cart-price">total price : &dollar;00.00</p>
+  <div class="modal-btn">
+  <button class="btn secondary clear">clear cart</button>
+  <button class="btn primary confrim">confirm</button>
+</div>
+</div>
+      </aside>
+      <!-- end of cart modal -->
+      <section class="product-section">
+        <div class="section-title">
+          <a class="shoe-type" data-filter="Dunk" href="#">Dunks</a>
+          <a class="shoe-type" data-filter="blazer" href="#">Blazers</a>
+          <a class="shoe-type" data-filter="Jordan" href="#">Jordans</a>
+          <a class="shoe-type" data-filter="slip" href="#">slips</a>
+        </div>
+        <div class="products">
+         
+        </div>
+      </section>
+      <!-- end of product section -->
+      <section class="footer-section">
+        <footer class="footer">
+          <span class="icon home-icon"><i class="fa-solid fa-house-user"></i></i></span>
+          <span class="icon search-icon"><i class="fa-solid fa-magnifying-glass"></i></i></span>
+          <span class="icon bell-icon"><i class="fa-regular fa-bell"></i></span>
+          <span class="icon fav-icon"><i class="fa-regular fa-star"></i></span>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>

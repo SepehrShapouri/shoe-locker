@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/css/checkout.css">
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../src/js/main.js" type="module" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-center">
+              <div class="options">
+              <span class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+              </span>
+              <aside class="search-bar">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <form  class="search-form" id="search">
+                  <input type="text" class="search-input" placeholder="search for....">
+                </form>
+              </aside>
+              </div>
+              <h1 class="head-text">Sepi's Shoe Locker</h1>  
+              <span class="cart-icon">
+                <i class="fa-solid fa-cart-plus"></i>
+                <span class="cart-items">0</span>
+              </span>
+            </div>
+          </nav>
+          <div class="main-wrapper">
+          <main class="main-section">
+            <div class="my-bag">
+                <div class="bag-info">
+                    <h1 class="bag-title">MY BAG</h1>
+                    <p class="bagQuantity">21 Items</p>
+                </div>
+                <section class="cart-products">
+                    <ul class="product-list">
+
+                    </ul>
+                </section>
+                <h4 class="bagSubtotal"><p>SUB-TOTAL</p><p class="finalBagPrice">&dollar;199.00</p></h4>
+            </div>
+    
+                <div class="doption delivery">
+                    <span class="tag-icon"><i class="fa-sharp fa-solid fa-truck-fast"></i></span>
+                    <div class="tag-details">
+                        <h5>FREE STANDARD DELIVERY</h5>
+                            <p class="tag-desc">FASTEST DELIVERY ON EARTH</p>
+                    </div>
+                </div>
+                <div class="doption easy-returns">
+                    <span class="tag-icon"><i class="fa-solid fa-rotate-left"></i></span>
+                    <div class="tag-details">
+                        <h5>EASY RETURNS</h5>
+                        <p class="tag-desc">DONT LIKE YOUR SHIT?EASILY GET IT REPLACED</p>
+                    </div>
+                </div>
+            
+            <div class="cartTotal">
+                <h3 class="Total">TOTAL</h3>
+                <span class="sub-total"><p>Sub-total</p><p class="checkoutFinalPrice">$199.69</p></span>
+                <span class="delivery-fee"><p>Delivery</p><p class="deliveryFee">$20.00</p></span>
+                <button class="checkout-btn">CHECKOUT</button>
+                <aside class="accepted-carts">
+                    <p>we accept:</p>
+                    <ul class="carts">
+                        <li class="cart-img"><img class="img" src="./images/VISA.png" alt=""></li>
+                        <li class="cart-img"><img class="img" src="./images/Mastercard_logo.jpg" alt=""></li>
+                        <li class="cart-img"><img class="img" src="./images/paypal_PNG16.png" alt=""></li>
+                        <li class="cart-img"><img class="img" src="./images/btc.webp" alt=""></li>
+                    </ul>
+                    <p class="discount">Got a discount code?Add it in the next step.</p>
+                </aside>
+            </div>
+          </main>
+          </div>
+          <section class="footer-section">
+            <footer class="footer">
+              <span class="icon home-icon"><i class="fa-solid fa-house-user"></i><a href="./index.html"></a></i></span>
+              <span class="icon search-icon"><i class="fa-solid fa-magnifying-glass"></i></i></span>
+              <span class="icon bell-icon"><i class="fa-regular fa-bell"></i></span>
+              <span class="icon fav-icon"><i class="fa-regular fa-star"></i></span>
+            </footer>
+          </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+  background-color: var(--bodyColor);
+  position: relative;
+}
+.bagEmpty{
+    text-decoration: none;
+ position: absolute;
+ top: 2rem;
+  color:rgba(0, 243, 243, 1);
+}
+.cart-img{
+    width: 50px;
+    height: 20px;
+    list-style: none;
+}
+.img{
+    object-fit: contain;
+    width: 50px;
+    height: 20px;
+}
+.carts{
+    display: flex;
+}
+.list-item{
+    list-style: none;
+}
+.my-bag{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 10px ;
+    padding: 1rem;
+    position: relative;
+}
+.bag-title{
+    font-size: 1.2rem;
+}
+.bag-info{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-products{
+    margin-top: 1rem;
+    background-color:white;
+    position: relative;
+}
+.productPicture{
+    width: 70px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.list-item{
+    display: flex;
+    position: relative;
+    background-color: white;
+    margin: 10px;
+    border-top: 1px solid  rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.removeItem{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.productInfo{
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.productLogic{
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+.button{
+    all: unset;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    width: 60px;
+    text-align: center;
+    font-size: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-heart{
+    color: rgba(0, 0, 0, 0.2);
+}
+.bagSubtotal{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin: 1rem;
+}
+.doption{
+    background-color:white;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    border-radius: 10px;
+}
+.tag-icon{
+    margin-right: 1rem;
+}
+.tag-desc{
+    margin-top: 0.5rem;
+}
+.cartTotal{
+background-color: white;
+margin: 1rem;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+border-radius: 10px;
+}
+.Total{
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    width: 100px;
+}
+.sub-total,.delivery-fee{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+.delivery-fee{
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+    padding: 1rem 0;
+}
+
+.checkout-btn{
+    all:unset;
+    background-color:rgb(47, 255, 130);
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+.checkout-btn:hover{
+    opacity: 0.8;
+    border: none;
+  
+}
+.accepted-carts{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.discount{
+    opacity: 0.5;
+}
+@media all and (min-width:819px){
+    .main-section{
+        width: 100vw;
+        display: grid;
+        grid-template-columns:repeat(5,20%);
+        grid-template-rows: 200px 200px 200px 150px 150px;
+        grid-template-areas: 
+        "mybag mybag mybag total total"
+        "mybag mybag mybag total total"
+        "mybag mybag mybag empty empty"
+        "delivery delivery delivery empty empty"
+        "return return return empty empty";
+    }
+    .my-bag{
+        grid-area:mybag;
+    }
+    .cartTotal{
+        grid-area: total;
+    }
+ .doption.delivery{
+        grid-area: delivery;
+        margin-top: 2rem;
+    }
+ .doption.easy-returns{
+grid-area: return;
+    }
+    .doption{
+        font-size: 1.4rem;
+    }
+    .section-empty{
+        grid-template-rows: 200px 150px 150px;
+        grid-template-areas: 
+        "mybag mybag mybag total total"
+        "delivery delivery delivery total total"
+        "return return return empty empty";
+    }
+}
+.main-section{
+    max-width: 1500px;
+}
+.main-wrapper{
+display: flex;
+justify-content: center;
+}
+.saveForLater:hover{
+    border:thin solid orange;
+}
+.product-list{
+    height: 450px;
+    overflow-y:auto;
+}
